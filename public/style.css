@@ -1,12 +1,33 @@
+.fuzzfeed {
+    font-family: 'Young Serif', serif;
+}
 body {
     background-color: mistyrose;
+    text-decoration: none;
 }
 
 img {
     width: 200px;
+    height: 200px;
 }
 
-.dish-list {
+.pet-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-decoration: none;
+}
+
+.pet-card {
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+    background-image: radial-gradient(rgb(31, 213, 254), white);
+}
+.pet-card img {
+    width: 100%;
+    display: block;
+}
+
+.header {
+    justify-content: flex-start;
 }

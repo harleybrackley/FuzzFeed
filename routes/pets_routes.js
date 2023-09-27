@@ -42,20 +42,23 @@ router.delete('/pets/:id', ensureLoggedIn, (req, res) => {
     })
 })
 
-router.get('pets/:id', (req, res) => {
-    const sql = `SELECT FROM * pets WHERE id = ${req.params.id};`
+router.get('/pets/:id', (req, res) => {
+    const sql = `SELECT * FROM pets WHERE id = ${req.params.id};`
 
     db.query(sql, (err, dbRes) => {
+        if(err) {
+            console.log(err);
+        }
         let pet = dbRes.rows[0]
         res.render('show_pet', {pet})
     })
 })
 
-router.get('pets/:id/edit', ensureLoggedIn, (req, res) => {
+router.get('/pets/:id/edit', ensureLoggedIn, (req, res) => {
     
     let petId = req.params.id
 
-    let sql = `SELECT * FROM pets WHERE id = ${petID}`
+    let sql = `SELECT * FROM pets WHERE id = ${petId}`
 
     db.query(sql, (err, dbRes) => {
         if(err) {
@@ -66,7 +69,7 @@ router.get('pets/:id/edit', ensureLoggedIn, (req, res) => {
     })
 })
 
-router.put('pets/:id', (req, res) => {
+router.put('/pets/:id', (req, res) => {
     
     let sql = `
     UPDATE pets
