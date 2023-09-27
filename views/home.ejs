@@ -1,0 +1,15 @@
+
+<section class="pet-list">
+
+    <% for (let pet of pets) { %>
+    <div class="pet-card">
+        <h2>
+            <a href="/pets/<%= pet.id %>"><%= pet.pet_name %></a>
+        </h2>
+    
+        <img src="<%= pet.image_url %>" alt="">
+    </div>
+    <% } %>
+    
+    
+</section>

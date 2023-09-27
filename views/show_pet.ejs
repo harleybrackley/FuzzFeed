@@ -1,0 +1,14 @@
+<h2>Pet Details</h2>
+
+<p><%= pet.pet_name %></p>
+<p><img src="<%= pet.image_url %>" alt=""></p> 
+<p><%= pet.pet_coat %> <%= pet.pet_breed %> <%= pet.pet_weight %></p>
+<p><%= pet.pet_description %></p>
+
+<form action="/pets/<%= pet.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <button>Delete</button>
+</form>
+
+
+<a href="/pets/<%= pet.id %>/edit">Edit Pet</a>

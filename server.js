@@ -10,10 +10,10 @@ const requestLogger = require('./middlewares/request_logger')
 const reqBodyMethodOverride = require('./middlewares/req_body_method_override');
 const setCurrentUser = require('./middlewares/set_current_user');
 
-const dishesRouter = require('./routes/dishes_routes.js');
+const petsRouter = require('./routes/pets_routes.js');
 const sessionsRouter = require('./routes/sessions_routes.js');
 const pagesRouter = require('./routes/pages_routes.js');
-const usersRoutes = require('./routes/users_routes');
+const usersRoutes = require('./routes/user_routes');
 
 const app = express();
 const port = process.env.PORT || 9090;
@@ -34,7 +34,7 @@ app.use(expressLayouts)
 
 
 app.use(pagesRouter)
-app.use(dishesRouter)
+app.use(petsRouter)
 app.use(sessionsRouter)
 app.use(usersRoutes)
 
