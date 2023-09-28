@@ -1,18 +1,23 @@
 <h2>Edit pet</h2>
 
-<form action="/pets<%= pet.id %>" method="post">
-    <input type="hidden" name="_method" value ="put">
+<form action="/pets/<%= pet.id %>" enctype="multipart/form-data" method="post" >
     <label for="">Name</label>
-    <input name="pet_name"type="text">
+    <input name="pet_name"type="text" value="<%= pet.pet_name %>">
     <label for="">Breed</label>
-    <input name="pet_breed" type="text">
-    <label for="">Image URL</label>
-    <input name="image_url"type="text">
+    <input name="pet_breed" type="text" value="<%= pet.pet_breed %>">
+    
+    <!-- <label for="">Image URL</label>
+    <input name="image_url"type="text"> -->
+
+    <label for="">File upload</label>
+    <input name="uploadfile"type="file">
+
     <label for="">Coat</label>
-    <input name="pet_coat" type="text">
+    <input name="pet_coat" type="text" value="<%= pet.pet_coat %>">
     <label for="">Weight</label>
-    <input name="pet_weight"type="text">
+    <input name="pet_weight"type="text" value="<%= pet.pet_weight %>">
     <label for="">Description</label>
-    <input name="pet_description" type="text">
+    <input name="pet_description" type="text" value="<%= pet.pet_description %>">
     <button>Share!</button>
+
 </form>

@@ -4,6 +4,7 @@ const db = require('../db');
 const bcrypt = require('bcrypt')
 
 
+
 router.get('/', (req, res) => {
     console.log(req.session.userId);
     db.query('SELECT * FROM pets order by id;', (err, dbRes) => {
@@ -16,6 +17,8 @@ router.get('/', (req, res) => {
 router.get('/about', (req, res) => {
     res.render('about')
 })
+
+
 
 module.exports = router
 

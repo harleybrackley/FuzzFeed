@@ -13,11 +13,11 @@
 
     <nav>
         <div class="header">
-        <a href="/">Home</a>
-        <a href="/about">About</a>
+        <a class="link-styles" href="/">Home</a>
+        <a class="link-styles" href="/about">About</a>
 
         <% if (userId) {%>
-        <a href="/pets/new">Share your pet!</a>
+        <a class="link-styles" href="/pets/new">Share your pet!</a>
         <% } %>
 
 
@@ -25,13 +25,13 @@
         <%if (userId)  { %>
         <form action="/logout" method="post">
             <input type="hidden" name="_method" value="delete">
-            <button>logout</button>
+            <button class="logout-button">Logout</button>
         </form>
         <% } else { %>
-            <a href="/login">Login</a>
+            <a class="link-styles"  href="/login">Login</a>
+            <a class="link-styles" href="/signup">Signup</a>
         <% } %>
-        <a href="/signup">signup</a>
-        </div>
+    </div>
     </nav>
     <h1 class="fuzzfeed">FuzzFeed</h1>
 

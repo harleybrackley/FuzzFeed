@@ -1,9 +1,11 @@
 .fuzzfeed {
     font-family: 'Young Serif', serif;
+    font-size: 48px;
+    text-align: center;
+    background-color: rgb(0, 208, 255)
 }
 body {
-    background-color: mistyrose;
-    text-decoration: none;
+    background-image: radial-gradient(rgb(15, 148, 196), white);
 }
 
 img {
@@ -14,20 +16,48 @@ img {
 .pet-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    text-decoration: none;
+    gap: 5px;
 }
 
 .pet-card {
     text-align: center;
-    text-decoration: none;
     border-radius: 15px;
-    background-image: radial-gradient(rgb(31, 213, 254), white);
+    background-image: radial-gradient(white, rgb(0, 186, 50), rgb(0, 208, 255));
 }
 .pet-card img {
-    width: 100%;
-    display: block;
+    width: 90%;
+    border-radius: 10px;
 }
 
 .header {
-    justify-content: flex-start;
+    display: flex;
+    justify-content: space-around;
+}
+
+.link-styles:link{
+    text-decoration: none;
+    color: black;
+}
+.link-styles{
+    color: black;
+    font-size: 24px;
+    font-family: 'Young Serif', serif;
+}
+
+.link-styles:hover {
+    color: red;
+
+}
+
+.logout-button {
+    font-size: 24px;
+    font-family: 'Young Serif', serif;
+    padding: 0px;
+    border: none;
+    background: none;
+    color: black;
+}
+
+.logout-button:hover {
+    color: red;
 }
