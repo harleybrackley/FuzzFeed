@@ -101,7 +101,7 @@ router.get('/pets/:id/edit', ensureLoggedIn, (req, res) => {
 //     `
 
 
-//    const values = [req.body.pet_name, req.body.pet_breed,  req.body.pet_coat, req.body.pet_weight, req.body.pet_description, req.params.id]
+//    const values = [req.body.pet_name, req.body.pet_breed, req.body.pet_coat, req.body.pet_weight, req.body.pet_description, req.params.id]
 
 //    if(req.file) {
 //     let sql = `
@@ -144,8 +144,8 @@ router.get('/pets/:id/edit', ensureLoggedIn, (req, res) => {
 //         let values =[req.body.pet_name, req.body.pet_breed, req.body.pet_coat, req.body.pet_weight, req.body.pet_description, req.params.id]
 //         let sql = `
 //         UPDATE pets
-//         SET pet_name = $1, pet_breed = $2, image_url = $3, pet_coat = $4, pet_weight = $5, pet_description = $6
-//         WHERE id = $7;`
+//         SET pet_name = $1, pet_breed = $2, pet_coat = $3, pet_weight = $4, pet_description = $5
+//         WHERE id = $6;`
 //         db.query(sql, values, (err, dbRes) => {
 //             if(err) {
 //                 console.log(err);
@@ -155,7 +155,7 @@ router.get('/pets/:id/edit', ensureLoggedIn, (req, res) => {
 //     }
 // })
 
-router.post('/pets/:id', upload.single('uploadfile'), (req, res) => {
+router.put('/pets/:id', upload.single('uploadfile'), (req, res) => {
     let sql = `
     UPDATE pets
     SET pet_name = $1, pet_breed = $2, pet_coat = $3, pet_weight = $4, pet_description = $5

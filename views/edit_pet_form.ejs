@@ -1,6 +1,6 @@
 <h2>Edit pet</h2>
 
-<form action="/pets/<%= pet.id %>" enctype="multipart/form-data" method="post" >
+<form action="/pets/<%= pet.id %>?_method=put" enctype="multipart/form-data" method="post">
     <label for="">Name</label>
     <input name="pet_name"type="text" value="<%= pet.pet_name %>">
     <label for="">Breed</label>
