@@ -1,8 +1,10 @@
-<h2>Pet Details</h2>
 
-<p><%= pet.pet_name %></p>
+<h2><%= pet.pet_name %></h2>
+
 <p><img src="<%= pet.image_url %>" alt=""></p> 
-<p><%= pet.pet_coat %> <%= pet.pet_breed %> <%= pet.pet_weight %></p>
+<p>Coat: <%= pet.pet_coat %> </p>
+<p>Breed: <%= pet.pet_breed %> </p>
+<p>Weight: <%= pet.pet_weight %>kg</p>
 <p><%= pet.pet_description %></p>
 
 <form action="/pets/<%= pet.id %>" method="post">
